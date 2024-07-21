@@ -1,0 +1,6 @@
+script negro_sombra1
+{
+    lock
+    msgbox(format("¿Que haces aca?\n No deberias estar aqui...\p Bueno, no importa.\p Me presento, soy ???\p Cuentame sobre ti"))
+    Task_NewGameBirchSpeech_BoyOrGirl()
+}
