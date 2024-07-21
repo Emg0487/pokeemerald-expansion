@@ -6,14 +6,14 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_FAMILY_BULBASAUR
     [SPECIES_BULBASAUR] =
     {
-        .baseHP        = 60,
-        .baseAttack    = 70,
-        .baseDefense   = 40,
-        .baseSpeed     = 60,
-        .baseSpAttack  = 20,
-        .baseSpDefense = 20,
-        .types = MON_TYPES(TYPE_NORMAL),
-        .catchRate = 145,
+        .baseHP        = 45,
+        .baseAttack    = 49,
+        .baseDefense   = 49,
+        .baseSpeed     = 45,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 65,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
+        .catchRate = 45,
         .expYield = 64,
         .evYield_SpAttack = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
@@ -21,16 +21,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_PICKUP, ABILITY_SIMPLE, ABILITY_PRANKSTER },
+        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Basic Cat"),
+        .speciesName = _("Bulbasaur"),
         .cryId = CRY_BULBASAUR,
         .natDexNum = NATIONAL_DEX_BULBASAUR,
-        .categoryName = _("Cat"),
+        .categoryName = _("Seed"),
         .height = 7,
         .weight = 69,
         .description = COMPOUND_STRING(
-            "The Basic Cat."),
+            "Bulbasaur can be seen napping in bright\n"
+            "sunlight. There is a seed on its back.\n"
+            "By soaking up the sun's rays, the seed\n"
+            "grows progressively larger."),
         .pokemonScale = 356,
         .pokemonOffset = 17,
         .trainerScale = 256,
@@ -51,18 +54,18 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         FOOTPRINT(Bulbasaur)
         .levelUpLearnset = sBulbasaurLevelUpLearnset,
         .teachableLearnset = sBulbasaurTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 10, SPECIES_IVYSAUR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 16, SPECIES_IVYSAUR}),
     },
 
     [SPECIES_IVYSAUR] =
     {
         .baseHP        = 60,
-        .baseAttack    = 70,
-        .baseDefense   = 50,
-        .baseSpeed     = 80,
-        .baseSpAttack  = 20,
-        .baseSpDefense = 50,
-        .types = MON_TYPES(TYPE_NORMAL),
+        .baseAttack    = 62,
+        .baseDefense   = 63,
+        .baseSpeed     = 60,
+        .baseSpAttack  = 80,
+        .baseSpDefense = 80,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
         .catchRate = 45,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 141,
         .evYield_SpAttack = 1,
@@ -72,17 +75,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_PICKUP, ABILITY_SIMPLE, ABILITY_PRANKSTER },
+        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Macho Cat"),
+        .speciesName = _("Ivysaur"),
         .cryId = CRY_IVYSAUR,
         .natDexNum = NATIONAL_DEX_IVYSAUR,
-        .categoryName = _("Cat"),
+        .categoryName = _("Seed"),
         .height = 10,
         .weight = 130,
         .description = COMPOUND_STRING(
-            "Charm point: muscle definition.\n"
-            "Basic Cat."),
+            "To support its bulb, Ivysaur's legs\n"
+            "grow sturdy. If it spends more time lying in\n"
+            "the sunlight, the bud will soon bloom into\n"
+            "a large flower."),
         .pokemonScale = 335,
         .pokemonOffset = 13,
         .trainerScale = 256,
@@ -103,18 +108,18 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         FOOTPRINT(Ivysaur)
         .levelUpLearnset = sIvysaurLevelUpLearnset,
         .teachableLearnset = sIvysaurTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_VENUSAUR}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_VENUSAUR}),
     },
 
     [SPECIES_VENUSAUR] =
     {
         .baseHP        = 80,
-        .baseAttack    = 100,
-        .baseDefense   = 80,
+        .baseAttack    = 82,
+        .baseDefense   = 83,
         .baseSpeed     = 80,
-        .baseSpAttack  = 50,
+        .baseSpAttack  = 100,
         .baseSpDefense = 100,
-        .types = MON_TYPES(TYPE_NORMAL, TYPE_DARK),
+        .types = MON_TYPES(TYPE_GRASS, TYPE_POISON),
         .catchRate = 45,
     #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 263,
@@ -130,17 +135,19 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_GRASS),
-        .abilities = { ABILITY_PICKUP, ABILITY_SIMPLE, ABILITY_PRANKSTER },
+        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_CHLOROPHYLL },
         .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Mohawk Cat"),
+        .speciesName = _("Venusaur"),
         .cryId = CRY_VENUSAUR,
         .natDexNum = NATIONAL_DEX_VENUSAUR,
-        .categoryName = _("Cat"),
+        .categoryName = _("Seed"),
         .height = 20,
         .weight = 1000,
         .description = COMPOUND_STRING(
-            "Charm point: muscle definition.\n"
-            "Added charm point: beautiful hair."),
+            "Venusaur's flower is said to take on vivid\n"
+            "colors if it gets plenty of nutrition and\n"
+            "sunlight. The flower's aroma soothes the\n"
+            "emotions of people."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 388,
