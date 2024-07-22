@@ -5,5 +5,34 @@ script negro_sombra1
     lock
     msgbox(format("¿Que haces aca?\n No deberias estar aqui...\p Bueno, no importa.\p Me presento, soy ???\p Cuentame sobre ti.\p ¿Cual es tu nombre?"))
     special(ChangePName)
+    msgbox(format("Quiero proponerte un intercambio\p A cambio debes darme algo que yo quiero\p Dime..."))
+    message("¿Cual es tu elemento favorito?")
+    multichoice(25, 0, MULTI_ELEMENT, 1)
+    closemessage
+    setvar(VAR_ELEMENT, VAR_RESULT)
+    if (var(VAR_RESULT) == 0)
+    {
+        giveitem(ITEM_FLAME_PLATE, 1)
+    }
+    elif (var(VAR_RESULT) == 1)
+    {
+        giveitem(ITEM_SPLASH_PLATE, 1)
+    }
+    elif (var(VAR_RESULT) == 2)
+    {
+        giveitem(ITEM_MEADOW_PLATE, 1)
+    }
+    else
+    {
+        giveitem(ITEM_ZAP_PLATE, 1)
+    }
+    msgbox(format("Perfecto\n Ahora dame lo que me pertenece.\p Quiero mi Flauta Azur."))
+    msgbox(format("¿Como?\l ¿Que no la tienes?"))
+    trainerbattle_single(TRAINER_TIMMY, "Entonces tendre que quitarte la vida", "XD._.")
+    specialvar (VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_LOST)
+    {
+        warp(MAP_INSIDE_OF_TRUCK)
+    }
     release
 }
