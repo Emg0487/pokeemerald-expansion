@@ -3,7 +3,7 @@ mapscripts NewMap1_MapScripts {}
 script negro_sombra1
 {
     lock
-    msgbox(format("¿Que haces aca?\n No deberias estar aqui...\p Bueno, no importa.\p Me presento, soy ???\p Cuentame sobre ti.\p Cual es tu nombre?"))
-
+    msgbox(format("¿Que haces aca?\n No deberias estar aqui...\p Bueno, no importa.\p Me presento, soy ???\p Cuentame sobre ti.\p ¿Cual es tu nombre?"))
+    special(ChangePName)
     release
 }

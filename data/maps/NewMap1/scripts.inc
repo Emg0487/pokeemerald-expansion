@@ -8,6 +8,8 @@ negro_sombra1::
 # 6 "data/maps/NewMap1/scripts.pory"
 	msgbox negro_sombra1_Text_0
 # 7 "data/maps/NewMap1/scripts.pory"
+	special ChangePName
+# 8 "data/maps/NewMap1/scripts.pory"
 	release
 	return
 
@@ -18,4 +20,5 @@ negro_sombra1_Text_0:
 	.string "No deberias estar aqui...\p"
 	.string "Bueno, no importa.\p"
 	.string "Me presento, soy ???\p"
-	.string "Cuentame sobre ti$"
+	.string "Cuentame sobre ti.\p"
+	.string "¿Cual es tu nombre?$"
